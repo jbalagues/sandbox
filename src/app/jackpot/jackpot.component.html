@@ -2,12 +2,14 @@
   <div class="container">
     <div class="row no-gutters">
       <div id="appframe" >
-        <img id="slot_L" src="../../assets/img/slot/hart_q.png" height="199" width="80" alt="slot wheel 1"/>
-        <img id="slot_M" src="../../assets/img/slot/hart_q.png" height="199" width="80" alt="slot wheel 2"/>
-        <img id="slot_R" src="../../assets/img/slot/hart_q.png" height="199" width="80" alt="slot wheel 3"/>
-        <img id="slot_handle" src="../../assets/img/slot/lever-up.png" height="943" width="114" 
+        <img id="slot_L" src="{{ slot_L }}" height="199" width="80" alt="slot wheel 1"/>
+        <img id="slot_M" src="{{ slot_M }}" height="199" width="80" alt="slot wheel 2"/>
+        <img id="slot_R" src="{{ slot_R }}" height="199" width="80" alt="slot wheel 3"/>
+        <img id="slot_handle" src="{{ slot_handle }}" height="943" width="114" 
               (mousedown)="pullHandle($event)" (mouseup)="initiatePull($event)"/>
-        <img id="winner_light" src="../../assets/img/slot/winner.png" height="48" width="247" alt="winner indicator"/>
+       
+        <img [ngStyle]="{'visibility':winner_visible ? 'visible' : 'hidden'}" id="winner_light" src="{{ winner_IMG }}" height="48" width="247" alt="winner indicator"/>
+       
       </div>
     </div>
     <div class="row no-gutters">
