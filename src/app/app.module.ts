@@ -5,16 +5,19 @@ import { AppComponent } from "./app.component";
 import { JackpotComponent } from "./jackpot/jackpot.component";
 import { HeaderComponent } from "./header/header.component";
 import { MainComponent } from "./main/main.component";
+import { AwsService } from "./servicios/aws.service";
+import { ContactoComponent } from "./contact/contacto.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     JackpotComponent,
-    MainComponent
+    MainComponent,
+    ContactoComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [AwsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
