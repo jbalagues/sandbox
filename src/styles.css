@@ -15,7 +15,12 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  background: url(./assets/img/hero.jpg) no-repeat 50% 50%;
+  /*background: url(./assets/img/hero.jpg) no-repeat 50% 50%;
+  background: url(./assets/img/glass-building-1149726_1280.jpg) no-repeat 50%
+    50%;
+  background: url(./assets/img/staircase-274614_1280.jpg) no-repeat 50% 50%;
+  */
+  background: url(./assets/img/architecture-1048092_1280.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -42,12 +47,13 @@ nav {
   position: fixed;
   width: 100%;
   line-height: 60px;
+  z-index: 1;
 }
 
 nav ul {
   line-height: 60px;
   list-style: none;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   color: #fff;
   padding: 0;
