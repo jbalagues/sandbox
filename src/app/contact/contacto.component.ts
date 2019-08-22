@@ -13,6 +13,8 @@ export class ContactoComponent implements OnInit {
   asunto: string = "";
   email: string = "";
   mensaje: string = "";
+  showDialog: boolean = true;
+  resultadoMail: string = "Mail enviado correctamente !!!";
 
   doTextareaValueChange(ev) {
     try {
@@ -46,11 +48,13 @@ export class ContactoComponent implements OnInit {
       )
       .then(
         function(res) {
-          console.log("I'm a toast!", "Success!");
+          //toastr.success('Mail enviado');
           console.log("Mail enviado", res.status, res.text);
+          this.showDialog = true;
+          this.resultadoMail = "Mail enviado correctamente !!!";
         },
         function(err) {
-          console.log("I'm a toast!", "Success!");
+          //toastr.error(err);
           console.log(err);
         }
       );
@@ -59,5 +63,13 @@ export class ContactoComponent implements OnInit {
     this.asunto = "";
     this.email = "";
     this.mensaje = "";
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

@@ -8,6 +8,7 @@ import { MainComponent } from "./main/main.component";
 import { AwsService } from "./servicios/aws.service";
 import { ContactoComponent } from "./contact/contacto.component";
 import { FormsModule } from "@angular/forms";
+import { DialogComponent } from "./dialog/dialog.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from "@angular/forms";
     HeaderComponent,
     JackpotComponent,
     MainComponent,
-    ContactoComponent
+    ContactoComponent,
+    DialogComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [AwsService],

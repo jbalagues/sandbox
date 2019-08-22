@@ -28,5 +28,8 @@
       <div id="map" class="bg-white"></div>
     </div>
   </div>
-
-   </section>
+</section>
+<app-dialog [(visible)]="showDialog">
+	<h1>{{ resultadoMail }}</h1>
+	<button (click)="showDialog = !showDialog" class="btn">Close</button>
+</app-dialog>
