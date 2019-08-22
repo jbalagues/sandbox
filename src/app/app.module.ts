@@ -7,6 +7,7 @@ import { HeaderComponent } from "./header/header.component";
 import { MainComponent } from "./main/main.component";
 import { AwsService } from "./servicios/aws.service";
 import { ContactoComponent } from "./contact/contacto.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ContactoComponent } from "./contact/contacto.component";
     MainComponent,
     ContactoComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [AwsService],
   bootstrap: [AppComponent]
 })

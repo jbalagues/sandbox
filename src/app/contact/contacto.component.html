@@ -1,28 +1,26 @@
-<p>
-  contacto works!
-</p>
+
 <section class="ftco-section contact-section">
   <div class="row block-9 justify-content-center mb-5">
     <div class="col-md-8 mb-md-5">
-      <h2 class="text-center">If you got any questions <br>please do not hesitate to send us a message</h2>
+      <h2 class="text-center">Si quieres ponerte en contacto conmigo<br>no dudes en enviarme un mensaje</h2>
       <form action="#" class="bg-light p-5 contact-form">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Your Name">
+          <input type="text" class="form-control" placeholder="Tu nombre" name="nombre" [(ngModel)] = "nombre">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Your Email">
+          <input type="text" class="form-control" placeholder="Tu Email" name="email" [(ngModel)] = "email">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Subject">
+          <input type="text" class="form-control" placeholder="Asunto" name="asunto"  [(ngModel)] = "asunto">
         </div>
         <div class="form-group">
-          <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+          <textarea name="mensaje" id="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensaje"  
+          (change)="doTextareaValueChange($event)">{{mensaje}}</textarea>
         </div>
         <div class="form-group">
-          <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+          <button class="btn btn-primary py-3 px-5" (click)=enviar()>Enviar mensaje</button>
         </div>
-      </form>
-    
+      </form>    
     </div>
   </div>
   <div class="row justify-content-center">
