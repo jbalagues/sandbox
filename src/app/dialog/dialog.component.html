@@ -1,6 +1,24 @@
-<div [@dialog] *ngIf="visible" class="dialog">
-	<ng-content></ng-content>
-	<button *ngIf="closable" (click)="close()" aria-label="Close" 
-	class="dialog__close-btn">X</button>
+<!-- The Modal -->
+<div class="dialog" id="myModal" *ngIf="visible">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header 
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="close()">&times;</button>
+      </div>-->
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        	<ng-content></ng-content>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal"  (click)="close()">Close</button>
+      </div>
+
+    </div>
+  </div>
 </div>
-<div *ngIf="visible" class="overlay" (click)="close()"></div>
