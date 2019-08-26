@@ -1,0 +1,13 @@
+.main-section {
+  background-color: blanchedalmond;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 10px;
+}
+
+.main_img {
+  width: 100%;
+}

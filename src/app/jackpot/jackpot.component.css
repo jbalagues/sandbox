@@ -1,13 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
-
+.container {
+  margin-top: 0px;
+}
 #appframe {
   background-image: url(../../assets/img/slot/slotmachine.jpg);
   background-repeat: no-repeat;
   background-origin: content-box;
-  position: relative;
+  position: absolute;
   min-height: 1080px;
-  width: 1000px;
+  width: 100%;
 }
 
 #slot_L {
@@ -49,4 +51,11 @@
   min-height: 48px;
   width: 247px;
   visibility: hidden;
+}
+
+@media (max-width: 786px) {
+  #appframe {
+    transform: scale(0.4); /* Equal to scaleX(0.7) scaleY(0.7) */
+    background-color: pink;
+  }
 }
