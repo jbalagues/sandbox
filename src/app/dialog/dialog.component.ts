@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { trigger, style, animate, transition } from "@angular/animations";
 
 @Component({
   selector: "app-dialog",

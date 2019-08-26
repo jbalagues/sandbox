@@ -1,7 +1,7 @@
 
 <section class="ftco-section contact-section">
   <div class="row block-9 justify-content-center mb-5">
-    <div class="col-md-8 mb-md-5">
+    <div class="col-md-8 mb-md-5" style="background-color: white;">
       <h2 class="text-center">Si quieres ponerte en contacto conmigo<br>no dudes en enviarme un mensaje</h2>
       <form action="#" class="bg-light p-5 contact-form">
         <div class="form-group">
@@ -18,14 +18,13 @@
           (change)="doTextareaValueChange($event)">{{mensaje}}</textarea>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary py-3 px-5" (click)=enviar()>Enviar mensaje</button>
+           <div class="row justify-content-center">
+              <div class="col text-center">
+                 <button class="btn btn-primary py-3 px-5" (click)=enviar()>Enviar mensaje</button>
+              </div>
+           </div>
         </div>
       </form>    
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-md-10">
-      <div id="map" class="bg-white"></div>
     </div>
   </div>
 </section>
