@@ -14,6 +14,9 @@ body {
   background: url(./assets/img/architecture-1048092_1280.jpg) no-repeat 50% 50%;
   background-size: cover;
   height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 header {

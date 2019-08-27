@@ -1,33 +1,38 @@
-
-<section class="ftco-section contact-section">
-  <div class="row block-9 justify-content-center mb-5">
-    <div class="col-md-8 mb-md-5" style="background-color: white;">
-      <h2 class="text-center">Si quieres ponerte en contacto conmigo<br>no dudes en enviarme un mensaje</h2>
-      <form action="#" class="bg-light p-5 contact-form">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Tu nombre" name="nombre" [(ngModel)] = "nombre">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Tu Email" name="email" [(ngModel)] = "email">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Asunto" name="asunto"  [(ngModel)] = "asunto">
-        </div>
-        <div class="form-group">
-          <textarea name="mensaje" id="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensaje"  
-          (change)="doTextareaValueChange($event)">{{mensaje}}</textarea>
-        </div>
-        <div class="form-group">
-           <div class="row justify-content-center">
-              <div class="col text-center">
-                 <button class="btn btn-primary py-3 px-5" (click)=enviar()>Enviar mensaje</button>
+<section class="ftco-section ftco-no-pb">
+   <div class="container">
+      <div class="row no-gutters">
+         <div class="col-md-4 p-md-5 img img-2 d-flex justify-content-center align-items-center"
+            style="background-size: 100% 100%;background-image: url('../assets/img/contact/bustia.jpg'); object-fit: cover;background-repeat: no-repeat;overflow:hidden;">
+         </div>      
+         <div class="col-md-8 wrap-about py-md-5 ftco-animate" style="background-color: white;">
+            <h2 class="text-center">Si quieres ponerte en contacto conmigo<br>no dudes en enviarme un mensaje</h2>
+            <form action="#" class="bg-light p-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tu nombre" name="nombre" [(ngModel)] = "nombre">
               </div>
-           </div>
-        </div>
-      </form>    
-    </div>
-  </div>
-</section>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tu Email" name="email" [(ngModel)] = "email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Asunto" name="asunto"  [(ngModel)] = "asunto">
+              </div>
+              <div class="form-group">
+                <textarea name="mensaje" id="mensaje" cols="30" rows="7" class="form-control" placeholder="Mensaje"  
+                (change)="doTextareaValueChange($event)">{{mensaje}}</textarea>
+              </div>
+              <div class="form-group">
+                <div class="row justify-content-center">
+                    <div class="col text-center">
+                      <button class="btn btn-primary py-3 px-5" (click)=enviar()>Enviar mensaje</button>
+                    </div>
+                </div>
+              </div>
+            </form>    
+         </div>
+      </div>
+   </div>
+</section> 
+
 
 <app-dialog [(visible)]="showDialog">
 	<h4>{{ resultadoMail }}</h4>

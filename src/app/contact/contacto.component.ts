@@ -13,7 +13,7 @@ export class ContactoComponent implements OnInit {
   asunto: string = "";
   email: string = "";
   mensaje: string = "";
-  showDialog: boolean = true;
+  showDialog: boolean = false;
   resultadoMail: string = "Mail enviado correctamente !!!";
 
   doTextareaValueChange(ev) {
