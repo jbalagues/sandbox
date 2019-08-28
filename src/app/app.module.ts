@@ -9,6 +9,8 @@ import { AwsService } from "./servicios/aws.service";
 import { ContactoComponent } from "./contact/contacto.component";
 import { FormsModule } from "@angular/forms";
 import { DialogComponent } from "./dialog/dialog.component";
+import { MnistComponent } from "./mnist/mnist.component";
+import { DrawableDirective } from "./directiva/drawable.directive";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DialogComponent } from "./dialog/dialog.component";
     JackpotComponent,
     MainComponent,
     ContactoComponent,
-    DialogComponent
+    MnistComponent,
+    DialogComponent,
+    DrawableDirective
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [AwsService],
