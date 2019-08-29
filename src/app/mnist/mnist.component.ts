@@ -15,14 +15,12 @@ export const handler = async (event: any = {}): Promise<any> => {
   return response;
 }*/
 export class MnistComponent implements OnInit {
-  linearModel: tf.Sequential;
+  //linearModel: tf.Sequential;
   prediction: any;
   predictedNumber: string;
 
-  tf = require("@tensorflow/tfjs-node");
-
   model: tf.Model;
-  predictions: any;
+  //predictions: any;
 
   @ViewChild(DrawableDirective) canvas;
 
@@ -33,13 +31,14 @@ export class MnistComponent implements OnInit {
   //// LOAD PRETRAINED KERAS MODEL ////
 
   async loadModel() {
-    this.model = await tf.loadModel("/assets/mnist/model.json");
+    this.model = await tf.loadLayersModel("../..//assets/mnist/model.json");
   }
 
   async predict(imageData: ImageData) {
     const pred = await tf.tidy(() => {
       // Convert the canvas pixels to
-      let img = tf.fromPixels(imageData, 1);
+      //let img = tf.fromPixels(imageData, 1);
+      let img = tf.browser.fromPixels(imageData, 1);
       img = img.reshape([1, 28, 28, 1]);
       img = tf.cast(img, "float32");
 
