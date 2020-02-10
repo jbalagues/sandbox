@@ -1,44 +1,53 @@
 <section class="ftco-section ftco-no-pb">
   <div class="container">
     <div class="row no-gutters">
-      <div
-        class="col-md-11 wrap-about py-md-11 ftco-animate"
-        style="background-color: white;"
-      >
-        Rellotge: {{horaTexto}}
-
-        <div class="grid-container">
-          <div class="grid-item">La</div>
-          <div class="grid-item">Les</div>
-          <div class="grid-item">Mig</div>
-          <div class="grid-item">Un</div>
-          <div class="grid-item">Dos</div>
-          <div class="grid-item">Tres</div>
-          <div class="grid-item">quart</div>
-          <div class="grid-item">quarts</div>
-          <div class="grid-item">i mig</div>
-          <div class="grid-item">ben</div>
-          <div class="grid-item">tocat</div>
-          <div class="grid-item">tocats</div>
-          <div class="grid-item">passat</div>
-          <div class="grid-item">passats</div>
-          <div class="grid-item">d'</div>
-          <div class="grid-item">de</div>
-          <div class="grid-item">una</div>
-          <div class="grid-item">dues</div>
-          <div class="grid-item">tres</div>
-          <div class="grid-item">quatre</div>
-          <div class="grid-item">cinc</div>
-          <div class="grid-item">sis</div>
-          <div class="grid-item">set</div>
-          <div class="grid-item">vuit</div>
-          <div class="grid-item">nou</div>
-          <div class="grid-item">deu</div>
-          <div class="grid-item">onze</div>
-          <div class="grid-item">dotze</div>
-          <div class="grid-item">en punt</div>
-          <div class="grid-item">tocada</div>
-          <div class="grid-item">tocades</div>
+      <div class="col-md-12 wrap-about py-md-5 ftco-animate">
+        <div class="heading-section p-md-10">
+          Rellotge: {{horaTexto}}
+          <div class="grid-container">
+            <div *ngFor="let item of texte_campanar; index as i;">
+              <div [ngClass]="getClass(i)">{{item}}</div>
+            </div>
+            <!-- 
+            <div
+              [ngClass]="{             
+              'grid-item-selected' : 6>0,
+              'grid-item' : -6 > 10
+              }"
+            >
+              La
+            </div>
+            <div [ngClass]="getClass()">Les</div>
+            <div class="grid-item">Mig</div>
+            <div class="grid-item">Un</div>
+            <div class="grid-item">Dos</div>
+            <div class="grid-item">Tres</div>
+            <div class="grid-item">quart</div>
+            <div class="grid-item">quarts</div>
+            <div class="grid-item">i mig</div>
+            <div class="grid-item">ben</div>
+            <div class="grid-item">tocat</div>
+            <div class="grid-item">tocats</div>
+            <div class="grid-item">passat</div>
+            <div class="grid-item">passats</div>
+            <div class="grid-item">d'</div>
+            <div class="grid-item">de</div>
+            <div class="grid-item">nou</div>
+            <div class="grid-item">una</div>
+            <div class="grid-item">dues</div>
+            <div class="grid-item">vuit</div>
+            <div class="grid-item">tres</div>
+            <div class="grid-item">sis</div>
+            <div class="grid-item">set</div>
+            <div class="grid-item">quatre</div>
+            <div class="grid-item">cinc</div>
+            <div class="grid-item">deu</div>
+            <div class="grid-item">onze</div>
+            <div class="grid-item">dotze</div>
+            <div class="grid-item">en punt</div>
+            <div class="grid-item">tocada</div>
+            <div class="grid-item">tocades</div>-->
+          </div>
         </div>
       </div>
     </div>
