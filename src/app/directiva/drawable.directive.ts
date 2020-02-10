@@ -47,7 +47,7 @@ export class DrawableDirective implements OnInit {
 
     this.ctx.beginPath(); // begin
 
-    this.ctx.lineWidth = 10;
+    this.ctx.lineWidth = 20;
     this.ctx.lineCap = "round";
     this.ctx.strokeStyle = "#111111";
 
@@ -73,8 +73,22 @@ export class DrawableDirective implements OnInit {
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
   }
 
+  getImgData4(): ImageData {
+    /*const scaled = this.ctx.drawImage(this.canvas, 0, 0, 28, 28);
+    return this.ctx.getImageData(0, 0, 28, 28);*/
+
+    return this.ctx.getImageData(
+      0,
+      0,
+      this.ctx.canvas.width,
+      this.ctx.canvas.height
+    );
+  }
+
   getImgData(): ImageData {
-    const scaled = this.ctx.drawImage(this.canvas, 0, 0, 28, 28);
-    return this.ctx.getImageData(0, 0, 28, 28);
+    this.ctx.drawImage(this.canvas, 0, 0, 28, 28);
+    const valor = this.ctx.getImageData(0, 0, 28, 28);
+    this.ctx.clearRect(0, 0, 28, 28);
+    return valor;
   }
 }

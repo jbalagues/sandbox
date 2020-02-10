@@ -10,6 +10,7 @@ import { ContactoComponent } from "./contact/contacto.component";
 import { FormsModule } from "@angular/forms";
 import { DialogComponent } from "./dialog/dialog.component";
 import { MnistComponent } from "./mnist/mnist.component";
+import { RellotgeComponent } from "./rellotge/rellotge.component";
 import { DrawableDirective } from "./directiva/drawable.directive";
 
 @NgModule({
@@ -20,6 +21,7 @@ import { DrawableDirective } from "./directiva/drawable.directive";
     MainComponent,
     ContactoComponent,
     MnistComponent,
+    RellotgeComponent,
     DialogComponent,
     DrawableDirective
   ],
