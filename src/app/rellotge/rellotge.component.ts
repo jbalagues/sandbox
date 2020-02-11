@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { TEXTE_LLETRES } from "./constants";
 
 @Component({
   selector: "app-rellotge",
@@ -7,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class RellotgeComponent implements OnInit {
   horaTexto: string;
+
+  texte_lletres = TEXTE_LLETRES;
 
   texte: string[] = [
     "La",
@@ -52,9 +55,9 @@ export class RellotgeComponent implements OnInit {
   }
 
   getClass(indice: number) {
-    return "grid-item-selected";
+    return "grid-item grid-item-selected";
   }
-
+  /*
   calcularHora(hour: number, minute: number) {
     if (minute > 6) hour = hour + 1;
 
@@ -68,7 +71,7 @@ export class RellotgeComponent implements OnInit {
         " " +
         this.get_tocades(hour)
       );
-    if (minute === 5 || minute == 6)
+    if (minute === 5 || minute === 6)
       return (
         this.get_article(hour) +
         " " +
@@ -141,7 +144,7 @@ export class RellotgeComponent implements OnInit {
       return this.get_article(hour) + " " + this.get_hour(hour);
 
     return "no ho sé";
-  }
+  }*/
 
   get_de(hour) {
     if (hour === 1 || hour === 13 || hour === 11 || hour === 23) return "d'";
