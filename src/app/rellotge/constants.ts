@@ -1,20 +1,20 @@
 export const UN_Q: number[] = [0, 1];
 export const LES: number[] = [2, 3, 4];
-export const LA: number[] = [20, 21];
+export const LA: number[] = [18,19;
 export const DOS_Q: number[] = [5, 6, 7];
 export const TRES_Q: number[] = [8, 9, 10, 11];
 
 export const QUART: number[] = [12, 13, 14, 15, 16];
 export const QUARTS: number[] = [12, 13, 14, 15, 16, 17];
-export const QUART_I: number[] = [18];
+export const QUART_I: number[] = [20];
 export const DE: number[] = [22, 23];
-export const DE_APOS: number[] = [19];
+export const DE_APOS: number[] = [21];
 
 export const UN_H: number[] = [33, 34];
 export const UNA_H: number[] = [33, 34, 35];
 export const VUIT_H: number[] = [24, 25, 26, 27];
 export const TRETZE_H: number[] = [27, 28, 29, 30, 31, 32];
-export const QUATRE_H: number[] = [36, 37, 38, 39, 41, 41];
+export const QUATRE_H: number[] = [36, 37, 38, 39, 40, 41, 41];
 export const TRES_H: number[] = [39, 40, 41, 42];
 export const SIS_H: number[] = [42, 43, 44];
 export const SET_H: number[] = [44, 45, 46];
@@ -83,11 +83,11 @@ export const TEXTE_LLETRES: string[] = [
   "T", //16
   "S", // 17
 
-  "I", // 18
-  "D'", //19
+  "L", // 18
+  "A", //19
 
-  "L", // 20
-  "A", //21
+  "I", // 20
+  "D'", //21
 
   "D", //22
   "E", //23
@@ -193,7 +193,7 @@ export const TEXTE_LLETRES: string[] = [
   //------------
   "D", //96
   "E", //97//
-  ">", //98
+  "-", //98
 
   "V", //99
   "U", //100

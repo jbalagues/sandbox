@@ -1,43 +1,42 @@
 <section class="ftco-section ftco-no-pb">
   <div class="container">
     <div class="row no-gutters">
-      <div class="col-md-12 wrap-about py-md-5 ftco-animate">
-        <div class="heading-section p-md-5">
-          <h2 class="mb-4">Rellotge en catala</h2>
-          <p>Rellotge: {{horaTexto}}</p>
-
-          <p>
-            Hora:&nbsp;<input
-              type="number"
-              id="hora"
-              value="{{this.hora}}"
-              min="0"
-              max="23"
-              maxlength="2"
-              size="2"
-              style="width: 3em"
-              pattern="[0-9]*"
-              (change)="onChangeHora($event)"
-            />:
-            <input
-              type="number"
-              id="number"
-              value="{{this.minut}}"
-              min="0"
-              max="59"
-              style="width: 3em"
-              (change)="onChangeMinut($event)"
-            />
-          </p>
-          <div class="grid-container">
-            <div *ngFor="let item of texte_lletres; index as i;">
-              <div
-                [ngClass]="getClass(i) ? 'grid-item-selected' : 'grid-item'"
-                id="{{i}}"
-              >
-                <!--<div id="{{i}}" class="grid-item">-->
-                {{item}}
-              </div>
+      <div
+        class="col-md-12 wrap-about py-md-5 ftco-animate"
+        style="background-color: white;"
+      >
+        <h2 class="text-center">Rellotge en catala</h2>
+        <div class="form-group">
+          <input
+            type="number"
+            id="hora"
+            value="{{this.hora}}"
+            min="0"
+            max="23"
+            maxlength="2"
+            size="2"
+            style="width: 3em"
+            pattern="[0-9]*"
+            (change)="onChangeHora($event)"
+          />:
+          <input
+            type="number"
+            id="number"
+            value="{{this.minut}}"
+            min="0"
+            max="59"
+            style="width: 3em"
+            (change)="onChangeMinut($event)"
+          />: {{horaTexto}}
+        </div>
+        <div class="grid-container">
+          <div *ngFor="let item of texte_lletres; index as i;">
+            <div
+              [ngClass]="getClass(i) ? 'grid-item-selected' : 'grid-item'"
+              id="{{i}}"
+            >
+              <!--<div id="{{i}}" class="grid-item">-->
+              {{item}}
             </div>
           </div>
         </div>
